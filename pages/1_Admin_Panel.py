@@ -546,8 +546,10 @@ with tab4:
 
             menu_url = st.text_input(
                 "Menu URL",
-                value="http://localhost:8501/Customer_Menu",
-                help="When deployed, replace this with your Streamlit Cloud URL.",
+                value=st.secrets.get(
+                    "APP_URL",
+                    "https://digitalrestaurant-menu-keuve2cmjlwjwylvpy4arv.streamlit.app"
+                ),
             )
             qr_color    = st.color_picker("QR Code Color",    "#1A1A2E")
             bg_color    = st.color_picker("Background Color", "#FFFFFF")
