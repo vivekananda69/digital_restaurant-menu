@@ -1,0 +1,311 @@
+/* ============================================
+   RESTAURANT MENU BUILDER - PREMIUM CSS
+   ============================================ */
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+/* ── Global Reset & Base ── */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ── Root Color Palette ── */
+:root {
+    --primary:       #C8A96E;   /* warm gold */
+    --primary-dark:  #A8894E;   /* deeper gold */
+    --bg-dark:       #1A1A2E;   /* deep navy */
+    --bg-card:       #16213E;   /* card navy */
+    --bg-surface:    #0F3460;   /* surface blue */
+    --text-light:    #F5F5F5;   /* near white */
+    --text-muted:    #A0A0B0;   /* muted gray */
+    --accent-green:  #4CAF82;   /* success green */
+    --accent-red:    #E05555;   /* danger red */
+    --border:        rgba(200, 169, 110, 0.2);
+    --shadow:        0 8px 32px rgba(0,0,0,0.3);
+}
+
+/* ── Streamlit Main Container ── */
+.main .block-container {
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+    max-width: 1200px;
+}
+
+/* ── Hide Streamlit Default Branding ── */
+#MainMenu { visibility: hidden; }
+footer    { visibility: hidden; }
+header    { visibility: hidden; }
+
+/* ── Premium Hero Banner ── */
+.hero-banner {
+    background: linear-gradient(135deg, #1A1A2E 0%, #16213E 50%, #0F3460 100%);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 3rem 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-banner::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(200,169,110,0.05) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+.hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+    letter-spacing: 2px;
+}
+
+.hero-subtitle {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+/* ── Feature Cards on Home Page ── */
+.feature-card {
+    background: linear-gradient(135deg, #16213E, #1A1A2E);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 1.8rem;
+    text-align: center;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    height: 100%;
+}
+
+.feature-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--primary);
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.feature-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.feature-desc {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+/* ── Section Headers ── */
+.section-header {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--border);
+}
+
+/* ── Premium Buttons ── */
+.stButton > button {
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    color: #1A1A2E;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 0.6rem 1.5rem;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.stButton > button:hover {
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(200, 169, 110, 0.3);
+}
+
+/* ── Input Fields ── */
+.stTextInput > div > div > input,
+.stTextArea > div > div > textarea,
+.stNumberInput > div > div > input {
+    background-color: #16213E;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: var(--text-light);
+    font-family: 'Inter', sans-serif;
+}
+
+.stTextInput > div > div > input:focus,
+.stTextArea > div > div > textarea:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 2px rgba(200, 169, 110, 0.15);
+}
+
+/* ── Selectbox ── */
+.stSelectbox > div > div {
+    background-color: #16213E;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: var(--text-light);
+}
+
+/* ── Success / Error / Info Messages ── */
+.stSuccess {
+    background-color: rgba(76, 175, 130, 0.1);
+    border-left: 4px solid var(--accent-green);
+    border-radius: 8px;
+}
+
+.stError {
+    background-color: rgba(224, 85, 85, 0.1);
+    border-left: 4px solid var(--accent-red);
+    border-radius: 8px;
+}
+
+/* ── Menu Item Cards (Customer View) ── */
+.menu-card {
+    background: linear-gradient(135deg, #16213E, #1A1A2E);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 1.2rem;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.menu-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--primary);
+    box-shadow: var(--shadow);
+}
+
+.menu-item-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    color: var(--text-light);
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+}
+
+.menu-item-desc {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
+}
+
+.menu-item-price {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.1rem;
+    color: var(--primary);
+    font-weight: 600;
+}
+
+/* ── Category Badge ── */
+.category-badge {
+    display: inline-block;
+    background: rgba(200, 169, 110, 0.15);
+    border: 1px solid var(--border);
+    color: var(--primary);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+/* ── Sidebar Styling ── */
+[data-testid="stSidebar"] {
+    background: linear-gradient(180deg, #1A1A2E 0%, #16213E 100%);
+    border-right: 1px solid var(--border);
+}
+
+[data-testid="stSidebar"] .stMarkdown p {
+    color: var(--text-muted);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+}
+
+/* ── Divider ── */
+.premium-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--primary), transparent);
+    margin: 2rem 0;
+    border: none;
+}
+
+/* ── Stats Row ── */
+.stat-box {
+    background: linear-gradient(135deg, #16213E, #1A1A2E);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.2rem;
+    text-align: center;
+}
+
+.stat-number {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.stat-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* ── Responsive Images ── */
+.menu-food-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 0.8rem;
+}
+
+/* ── QR Code Container ── */
+.qr-container {
+    background: white;
+    border-radius: 16px;
+    padding: 1.5rem;
+    display: inline-block;
+    box-shadow: var(--shadow);
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #1A1A2E; }
+::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 3px;
+}

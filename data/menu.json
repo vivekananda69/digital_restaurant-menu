@@ -1,0 +1,106 @@
+{
+  "restaurant": {
+    "name": "The Golden Fork",
+    "tagline": "Fine Dining Experience",
+    "logo_path": "data/images/logo.jpeg",
+    "currency_symbol": "₹"
+  },
+  "categories": [
+    "Starters",
+    "Main Course",
+    "Desserts",
+    "Beverages"
+  ],
+  "menu_items": [
+    {
+      "id": "item_1781119189460",
+      "name": "Paneer Tikka",
+      "category": "Starters",
+      "price": 299.0,
+      "description": "Soft paneer cubes marinated in spiced yogurt, grilled to perfection in a tandoor.",
+      "image_path": "",
+      "available": true
+    },
+    {
+      "id": "item_1781119189460",
+      "name": "Veg Spring Rolls",
+      "category": "Starters",
+      "price": 199.0,
+      "description": "Crispy golden rolls filled with fresh vegetables and glass noodles.",
+      "image_path": "",
+      "available": true
+    },
+    {
+      "id": "item_1781119189461",
+      "name": "Mushroom Soup",
+      "category": "Starters",
+      "price": 179.0,
+      "description": "Creamy wild mushroom soup with a hint of thyme and fresh cream.",
+      "image_path": "",
+      "available": true
+    },
+    {
+      "id": "item_1781119189461",
+      "name": "Dal Makhani",
+      "category": "Main Course",
+      "price": 349.0,
+      "description": "Slow-cooked black lentils simmered overnight in rich tomato and butter gravy.",
+      "image_path": "",
+      "available": true
+    },
+    {
+      "id": "item_1781119189461",
+      "name": "Paneer Butter Masala",
+      "category": "Main Course",
+      "price": 399.0,
+      "description": "Velvety cottage cheese in a smooth, mildly spiced tomato-cashew gravy.",
+      "image_path": "",
+      "available": true
+    },
+    {
+      "id": "item_1781119189461",
+      "name": "Veg Biryani",
+      "category": "Main Course",
+      "price": 329.0,
+      "description": "Fragrant basmati rice layered with spiced vegetables, saffron, and crispy onions.",
+      "image_path": "",
+      "available": true
+    },
+    {
+      "id": "item_1781119189461",
+      "name": "Gulab Jamun",
+      "category": "Desserts",
+      "price": 149.0,
+      "description": "Soft milk-solid dumplings soaked in rose-flavoured sugar syrup. Served warm.",
+      "image_path": "",
+      "available": true
+    },
+    {
+      "id": "item_1781119189462",
+      "name": "Mango Kulfi",
+      "category": "Desserts",
+      "price": 129.0,
+      "description": "Traditional Indian ice cream made with condensed milk and fresh Alphonso mango.",
+      "image_path": "",
+      "available": true
+    },
+    {
+      "id": "item_1781119189462",
+      "name": "Mango Lassi",
+      "category": "Beverages",
+      "price": 149.0,
+      "description": "Chilled yogurt drink blended with sweet Alphonso mangoes. Thick and refreshing.",
+      "image_path": "",
+      "available": true
+    },
+    {
+      "id": "item_1781119189462",
+      "name": "Masala Chai",
+      "category": "Beverages",
+      "price": 79.0,
+      "description": "Freshly brewed spiced tea with ginger, cardamom, and cinnamon.",
+      "image_path": "",
+      "available": true
+    }
+  ]
+}
